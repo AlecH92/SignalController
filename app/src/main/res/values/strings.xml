@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SignalController</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_mactivity">Signal Controller</string>
+</resources>

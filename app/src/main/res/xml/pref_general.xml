@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="btdevice"
+        android:summary="Select a bluetooth device"
+        android:title="Bluetooth Devices"
+        android:enabled="false" />
+
+    <CheckBoxPreference
+        android:key="direction"
+        android:summary="Clockwise?"
+        android:title="Direction:"
+        android:checked="false" />
+
+</PreferenceScreen>
