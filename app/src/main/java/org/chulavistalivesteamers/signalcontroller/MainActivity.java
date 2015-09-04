@@ -80,7 +80,7 @@ public class MainActivity extends ActionBarActivity {
         Signal5 = (TextView) findViewById(R.id.Signal5);
         Signal6 = (TextView) findViewById(R.id.Signal6);
         connectionStatus = (TextView) findViewById(R.id.connectionStatus);
-        if(clockwise) {
+        /*if(clockwise) {
             Sensor1.setEnabled(false);
             Sensor2.setEnabled(false);
             Sensor3.setEnabled(false);
@@ -100,7 +100,7 @@ public class MainActivity extends ActionBarActivity {
             Signal5.setVisibility(View.VISIBLE);
             Signal6.setVisibility(View.VISIBLE);
         }
-        else {
+        else {*/
             Sensor1.setEnabled(true);
             Sensor2.setEnabled(true);
             Sensor3.setEnabled(true);
@@ -119,52 +119,28 @@ public class MainActivity extends ActionBarActivity {
             Signal4.setVisibility(View.INVISIBLE);
             Signal5.setVisibility(View.INVISIBLE);
             Signal6.setVisibility(View.INVISIBLE);
-        }
+       // }
 
         Sensor1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //send sensor1 pushed
-                Signal1.setBackgroundColor(Color.GREEN);
-                Signal2.setBackgroundColor(Color.RED);
-                Signal3.setBackgroundColor(Color.RED);
-                Signal4.setBackgroundColor(Color.TRANSPARENT);
-                Signal5.setBackgroundColor(Color.TRANSPARENT);
-                Signal6.setBackgroundColor(Color.TRANSPARENT);
-                sendDataByte((byte) 1);
-                sendDataByte((byte) 2);
-                sendDataByte((byte) 2);
-                sendDataByte((byte) 0);
-                sendDataByte((byte) 3);
-                sendDataByte((byte) 0);
-                sendDataByte((byte) 4);
-                sendDataByte((byte) 4);
-                sendDataByte((byte) 5);
-                sendDataByte((byte) 4);
-                sendDataByte((byte) 6);
-                sendDataByte((byte) 4);
+                Signal1.setBackgroundColor(Color.GREEN); setSignal(1, signalgreen);
+                Signal2.setBackgroundColor(Color.RED); setSignal(2, signalred);
+                Signal3.setBackgroundColor(Color.RED); setSignal(3, signalred);
+             /*   Signal4.setBackgroundColor(Color.TRANSPARENT); setSignal(4, signaloff);
+                Signal5.setBackgroundColor(Color.TRANSPARENT); setSignal(5, signaloff);
+                Signal6.setBackgroundColor(Color.TRANSPARENT); setSignal(6, signaloff);*/
             }
         });
         Sensor2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //send sensor1 pushed
-                Signal1.setBackgroundColor(Color.RED);
-                Signal2.setBackgroundColor(Color.GREEN);
-                Signal3.setBackgroundColor(Color.GREEN);
-                Signal4.setBackgroundColor(Color.TRANSPARENT);
-                Signal5.setBackgroundColor(Color.TRANSPARENT);
-                Signal6.setBackgroundColor(Color.TRANSPARENT);
-                sendDataByte((byte) 1);
-                sendDataByte((byte) 0);
-                sendDataByte((byte) 2);
-                sendDataByte((byte) 2);
-                sendDataByte((byte) 3);
-                sendDataByte((byte) 2);
-                sendDataByte((byte) 4);
-                sendDataByte((byte) 4);
-                sendDataByte((byte) 5);
-                sendDataByte((byte) 4);
-                sendDataByte((byte) 6);
-                sendDataByte((byte) 4);
+                Signal1.setBackgroundColor(Color.RED); setSignal(1, signalred);
+                Signal2.setBackgroundColor(Color.GREEN); setSignal(2, signalgreen);
+                Signal3.setBackgroundColor(Color.GREEN); setSignal(3, signalgreen);
+             /*   Signal4.setBackgroundColor(Color.TRANSPARENT); setSignal(4, signaloff);
+                Signal5.setBackgroundColor(Color.TRANSPARENT); setSignal(5, signaloff);
+                Signal6.setBackgroundColor(Color.TRANSPARENT); setSignal(6, signaloff);*/
             }
         });
         Sensor3.setOnClickListener(new View.OnClickListener() {
@@ -173,9 +149,9 @@ public class MainActivity extends ActionBarActivity {
                 Signal1.setBackgroundColor(Color.RED); setSignal(1, signalred);
                 Signal2.setBackgroundColor(Color.GREEN); setSignal(2, signalgreen);
                 Signal3.setBackgroundColor(Color.GREEN); setSignal(3, signalgreen);
-                Signal4.setBackgroundColor(Color.TRANSPARENT); setSignal(4, signaloff);
+             /*   Signal4.setBackgroundColor(Color.TRANSPARENT); setSignal(4, signaloff);
                 Signal5.setBackgroundColor(Color.TRANSPARENT); setSignal(5, signaloff);
-                Signal6.setBackgroundColor(Color.TRANSPARENT); setSignal(6, signaloff);
+                Signal6.setBackgroundColor(Color.TRANSPARENT); setSignal(6, signaloff);*/
             }
         });
         Sensor4.setOnClickListener(new View.OnClickListener() {
@@ -183,10 +159,10 @@ public class MainActivity extends ActionBarActivity {
                 //send sensor1 pushed
                 Signal1.setBackgroundColor(Color.TRANSPARENT); setSignal(1, signaloff);
                 Signal2.setBackgroundColor(Color.TRANSPARENT); setSignal(2, signaloff);
-                Signal3.setBackgroundColor(Color.TRANSPARENT); setSignal(3, signaloff);
+                Signal3.setBackgroundColor(Color.TRANSPARENT); setSignal(3, signaloff);/*
                 Signal4.setBackgroundColor(Color.GREEN); setSignal(4, signalgreen);
                 Signal5.setBackgroundColor(Color.RED); setSignal(5, signalred);
-                Signal6.setBackgroundColor(Color.RED); setSignal(6, signalred);
+                Signal6.setBackgroundColor(Color.RED); setSignal(6, signalred);*/
             }
         });
         Sensor5.setOnClickListener(new View.OnClickListener() {
@@ -194,10 +170,10 @@ public class MainActivity extends ActionBarActivity {
                 //send sensor1 pushed
                 Signal1.setBackgroundColor(Color.TRANSPARENT); setSignal(1, signaloff);
                 Signal2.setBackgroundColor(Color.TRANSPARENT); setSignal(2, signaloff);
-                Signal3.setBackgroundColor(Color.TRANSPARENT); setSignal(3, signaloff);
+                Signal3.setBackgroundColor(Color.TRANSPARENT); setSignal(3, signaloff); /*
                 Signal4.setBackgroundColor(Color.RED); setSignal(4, signalred);
                 Signal5.setBackgroundColor(Color.GREEN); setSignal(5, signalgreen);
-                Signal6.setBackgroundColor(Color.GREEN); setSignal(6, signalgreen);
+                Signal6.setBackgroundColor(Color.GREEN); setSignal(6, signalgreen);*/
             }
         });
         Sensor6.setOnClickListener(new View.OnClickListener() {
@@ -205,10 +181,10 @@ public class MainActivity extends ActionBarActivity {
                 //send sensor1 pushed
                 Signal1.setBackgroundColor(Color.TRANSPARENT); setSignal(1, signaloff);
                 Signal2.setBackgroundColor(Color.TRANSPARENT); setSignal(2, signaloff);
-                Signal3.setBackgroundColor(Color.TRANSPARENT); setSignal(3, signaloff);
+                Signal3.setBackgroundColor(Color.TRANSPARENT); setSignal(3, signaloff);/*
                 Signal4.setBackgroundColor(Color.RED); setSignal(4, signalred);
                 Signal5.setBackgroundColor(Color.GREEN); setSignal(5, signalgreen);
-                Signal6.setBackgroundColor(Color.GREEN); setSignal(6, signalgreen);
+                Signal6.setBackgroundColor(Color.GREEN); setSignal(6, signalgreen);*/
             }
         });
         t.scheduleAtFixedRate(new TimerTask() {
